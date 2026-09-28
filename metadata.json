@@ -1,0 +1,6 @@
+{
+  "name": "Aashreya Gold Hub",
+  "description": "Turn your old, unused or pledged gold into real value. Transparent XRF purity testing, pledged gold release assistance, and instant payment in Hyderabad & Telangana.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

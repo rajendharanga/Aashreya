@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-plum-deep: #1A0B22;
+    --color-plum-surface: #261132;
+    --color-plum-elevated: #331842;
+    --color-gold-primary: #D4AF37;
+    --color-gold-champagne: #E6C97A;
+    --color-ivory: #FAF7F2;
+    --color-charcoal: #161219;
+  }
+
+  html,
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #1A0B22;
+    color: #FAF7F2;
+    overflow-x: hidden;
+    max-width: 100%;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-display,
+  .font-editorial {
+    font-family: 'Sora', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    letter-spacing: -0.025em;
+    line-height: 1.08;
+    text-wrap: balance;
+    overflow-wrap: break-word;
+  }
+
+  .font-mono-num {
+    font-family: 'JetBrains Mono', monospace;
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Smooth fluid responsive typography scales across 320px -> 768px -> 1440px */
+.text-hero {
+  font-size: clamp(2.625rem, 4.6vw + 1.1rem, 4.875rem);
+  line-height: 1.05;
+}
+
+.text-page-hero {
+  font-size: clamp(2.25rem, 4vw + 0.9rem, 4.125rem);
+  line-height: 1.06;
+}
+
+.text-section-title {
+  font-size: clamp(1.95rem, 3.1vw + 0.85rem, 3.25rem);
+  line-height: 1.08;
+}
+
+.text-card-title {
+  font-size: clamp(1.35rem, 1.4vw + 0.9rem, 1.75rem);
+  line-height: 1.18;
+}
+
+@keyframes floatSlow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -6px, 0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,
+  100% {
+    opacity: 0.18;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.34;
+    transform: scale(1.03);
+  }
+}
+
+@media (min-width: 768px) {
+  .animate-float-slow {
+    animation: floatSlow 7s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulseGlow 5s ease-in-out infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
