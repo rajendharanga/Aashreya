@@ -17,11 +17,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20
-          cache: npm
+          node-version: 22
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build website
         run: npm run build
@@ -31,7 +30,7 @@ jobs:
           cd dist
           zip -r ../aashreya-dist.zip .
 
-      - name: Upload dist ZIP
+      - name: Upload deployment ZIP
         uses: actions/upload-artifact@v4
         with:
           name: aashreya-dist
