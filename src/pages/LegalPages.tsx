@@ -1,9 +1,15 @@
 import React from 'react';
 import { SITE_CONFIG } from '../config/siteConfig';
+import { Breadcrumbs } from '../components/Breadcrumbs';
 
 export const PrivacyPolicyPage: React.FC = () => {
   return (
     <div className="pt-24 sm:pt-28 lg:pt-32 overflow-hidden">
+      {/* Breadcrumbs */}
+      <div className="bg-[#FAF7F2] border-b border-[#1A0B22]/10">
+        <Breadcrumbs items={[{ label: 'Privacy Policy' }]} />
+      </div>
+
       <section className="py-12 sm:py-16 lg:py-24 bg-[#FAF7F2] text-[#161219]">
         <div className="max-w-[860px] mx-auto px-4 sm:px-6 md:px-8 space-y-6 sm:space-y-8">
           <div>
@@ -24,7 +30,7 @@ export const PrivacyPolicyPage: React.FC = () => {
               1. Information We Collect
             </h2>
             <p>
-              When you request a valuation via WhatsApp, phone call, or in-person consultation, we collect only the details necessary to serve you: your name, contact number, approximate gold weight/type, and statutory KYC verification documents required for compliant precious-metal transactions.
+              When you request a valuation via WhatsApp, phone call, or in-person consultation, we collect only the details necessary to serve you: your name, contact number, approximate gold weight/type, and statutory KYC verification documents required for compliant precious-metal transactions under Indian law.
             </p>
 
             <h2 className="text-lg sm:text-xl font-bold text-[#1A0B22] pt-2">
@@ -54,6 +60,11 @@ export const PrivacyPolicyPage: React.FC = () => {
 export const TermsAndConditionsPage: React.FC = () => {
   return (
     <div className="pt-24 sm:pt-28 lg:pt-32 overflow-hidden">
+      {/* Breadcrumbs */}
+      <div className="bg-[#FAF7F2] border-b border-[#1A0B22]/10">
+        <Breadcrumbs items={[{ label: 'Terms & Conditions' }]} />
+      </div>
+
       <section className="py-12 sm:py-16 lg:py-24 bg-[#FAF7F2] text-[#161219]">
         <div className="max-w-[860px] mx-auto px-4 sm:px-6 md:px-8 space-y-6 sm:space-y-8">
           <div>
@@ -70,7 +81,7 @@ export const TermsAndConditionsPage: React.FC = () => {
               1. Ownership &amp; KYC Verification
             </h2>
             <p>
-              All customers selling gold or requesting pledged-gold release assistance through <strong>{SITE_CONFIG.BRAND_NAME}</strong> must be at least 18 years of age, the lawful owner of the ornaments presented, and must provide valid government-issued photo ID and address proof prior to settlement.
+              All customers selling gold or requesting pledged-gold release assistance through <strong>{SITE_CONFIG.BRAND_NAME}</strong> must be at least 18 years of age, the lawful owner of the ornaments presented, and must provide valid government-issued photo ID (Aadhaar Card, PAN Card, Voter ID, or Passport) and address proof prior to settlement.
             </p>
 
             <h2 className="text-lg sm:text-xl font-bold text-[#1A0B22]">

@@ -10,20 +10,18 @@ export const SITE_CONFIG = {
   DOMAIN: 'aashreyagold.com',
   SITE_URL: 'https://aashreyagold.com',
   EMAIL: 'info@aashreyagold.com',
-  PHONE: '+91 79959 84433',
-  PHONE_RAW: '+917995984433',
-  SECONDARY_PHONE: '+91 79959 88282',
-  SECONDARY_PHONE_RAW: '+917995988282',
-  WHATSAPP_NUMBER: '917995984433',
+  PHONE: '+91 7981 696969',
+  PHONE_RAW: '+917981696969',
+  WHATSAPP_NUMBER: '917981696969',
   LOGO_URL: 'https://static.wixstatic.com/media/14ff0a_518248a4b63941da9452f3adb633d7c2~mv2.png',
   FOUNDER_NAME: 'Sangam Reddy Siva Prasad',
   FOUNDER_ROLE: 'Founder & Managing Director',
   HEADQUARTERS: {
-    line1: '1/B, Aashrey Heights, 5th Floor, 8-3-720',
-    line2: 'Lane Number 3, Shalivahana Nagar, Yella Reddy Guda',
+    line1: 'Ground Floor, Plot No. 8-2-299/82/W/B2',
+    line2: "Women's Cooperative Housing Society, Road No. 7, Near Film Nagar, Jubilee Hills",
     city: 'Hyderabad',
     state: 'Telangana',
-    postalCode: '500073',
+    postalCode: '500033',
     country: 'India',
     hours: 'Mon – Sat · 10:00 AM – 7:30 PM IST',
   },
@@ -73,51 +71,63 @@ export function buildDirectWhatsAppUrl(customMessage?: string): string {
   return `https://wa.me/${SITE_CONFIG.WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 }
 
-export function getCallHref(useSecondary = false): string {
-  return `tel:${useSecondary ? SITE_CONFIG.SECONDARY_PHONE_RAW : SITE_CONFIG.PHONE_RAW}`;
+export function getCallHref(): string {
+  return `tel:${SITE_CONFIG.PHONE_RAW}`;
 }
 
 export const FAQ_ITEMS = [
   {
     id: 'valuation',
-    question: 'How is my gold valued?',
+    question: 'How is my gold valued at Aashreya Gold Hub?',
     answer:
-      'Your gold value is determined transparently right in front of you based on exact net weight in grams on calibrated digital scales and exact carat purity verified via non-destructive XRF technology, with zero hidden deductions.',
+      'Your gold value is determined transparently in your presence based on two verified metrics: the exact net weight measured on calibrated digital scales (with non-gold stones deducted) and the exact carat purity determined via non-destructive XRF spectrometry. We calculate the valuation quote openly with zero hidden melt loss or melting deductions.',
   },
   {
     id: 'items',
-    question: 'What gold items do you buy?',
+    question: 'What gold items can I sell?',
     answer:
-      'We purchase all forms of genuine yellow and white gold, including old Indian jewellery, broken ornaments, single earrings, tangled chains, heirloom pieces, gold coins, biscuits, and released pledged gold across 24K, 22K, and 18K purities.',
+      'We purchase all forms of genuine gold ornaments and bullion across 24K, 22K, and 18K purities. This includes heirloom jewellery, bangles, necklaces, rings, chains, single earrings, broken or dented items, gold coins, biscuits, bars, and gold ornaments released from bank or pawnbroker pledges.',
   },
   {
     id: 'purity',
-    question: 'How is gold purity tested?',
+    question: 'How is gold purity tested, and will it damage my jewellery?',
     answer:
-      'We use German-engineered XRF (X-Ray Fluorescence) spectrometer machines. The test is 100% non-destructive, requires zero acid or melting during inspection, and delivers a digital carat accuracy readout within seconds while you watch.',
+      'We utilize German-engineered X-Ray Fluorescence (XRF) spectrometry. This testing method is 100% non-destructive and requires zero acid, rubbing, or melting during inspection. The XRF analyzer scans the atomic composition of the alloy within seconds, displaying the exact gold percentage and karat grade on a digital screen before your eyes.',
   },
   {
     id: 'docs',
-    question: 'What documents are required?',
+    question: 'What documents (KYC) are required to sell gold in India?',
     answer:
-      'For a compliant and secure transaction, please carry one valid government-issued photo ID (Aadhaar Card, PAN Card, Passport, or Voter ID) and address proof, along with original purchase invoices or pledge receipts if available.',
+      'In accordance with Indian regulatory compliance and anti-fraud guidelines, customers must be at least 18 years of age and provide one valid government-issued photo identity proof (Aadhaar Card, PAN Card, Voter ID, or Passport) along with address proof. If available, original purchase invoices or pledge receipts help expedite verification.',
   },
   {
     id: 'payment',
-    question: 'How quickly will I receive payment?',
+    question: 'How and when do I receive payment for my gold?',
     answer:
-      'Once you approve the final valuation quote, payment is transferred immediately—before you step out—via instant bank transfer (IMPS / NEFT / RTGS / UPI) or in accordance with statutory norms.',
+      'Payment is settled immediately upon your written acceptance of the valuation quote. The full amount is credited directly to your bank account via instant digital transfer (IMPS, NEFT, RTGS, or UPI) before you leave our hub. We provide a clear digital receipt for every transaction.',
   },
   {
     id: 'doorstep',
-    question: 'Can I request doorstep valuation?',
+    question: 'Do you offer doorstep gold valuation in Hyderabad?',
     answer:
-      'Yes. If you prefer privacy and convenience at home, our trained valuation specialists can visit your residence with portable precision scales and purity testing equipment. Call or WhatsApp us to schedule an appointment.',
+      'Yes, Aashreya Gold Hub provides private, doorstep gold valuation for clients in Hyderabad and surrounding Telangana areas. Our certified valuation officers visit your home with portable calibrated digital scales and secure testing kits to conduct an in-person assessment in complete privacy.',
   },
   {
     id: 'pledged',
-    question: 'How does pledged-gold release work?',
+    question: 'How does the pledged-gold release assistance service work?',
     answer:
-      'Share your existing gold loan or pledge receipt with our team. We verify the principal and interest due, accompany you to settle the institution directly to release your ornaments, test the gold transparently, and pay you the remaining surplus value immediately.',
+      'If your gold is pledged with a bank, NBFC, or pawnbroker, we review your pledge receipt to confirm the principal and accrued interest. Our representative accompanies you to the financial institution, provides funds to settle the loan dues directly, releases your jewellery, tests its purity via XRF, and transfers the remaining surplus equity to your bank account.',
+  },
+  {
+    id: 'stones',
+    question: 'How are gemstones, wax, and enamel handled during gold valuation?',
+    answer:
+      'All non-gold components—such as precious and semi-precious stones, beads, lac, wax fillings, and enamel—are accurately assessed and excluded from the net gold weight. You are only paid for the pure gold content, ensuring complete transparency with no arbitrary weight deductions.',
+  },
+  {
+    id: 'bills',
+    question: 'Can I sell old gold jewellery if I no longer have the purchase bill?',
+    answer:
+      'Yes. While original purchase bills or invoices are helpful, they are not mandatory. You can sell heirloom, gifted, or old family jewellery by providing valid government-issued photo ID (Aadhaar or PAN) and completing our statutory ownership declaration at the time of valuation.',
   },
 ] as const;
